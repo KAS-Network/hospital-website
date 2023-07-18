@@ -1,0 +1,68 @@
+@import "variables.scss";
+
+.hero {
+  margin: 0 auto;
+  max-width: 1440px;
+  background-image: url("../images/hero-bg.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px 50px 60px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__main-info {
+    margin-bottom: 20px;
+    max-width: 500px;
+  }
+
+  &__btn {
+    padding: 19px 0;
+    background-color: $mainColor;
+    font-size: 22px;
+    font-weight: 500;
+  }
+}
+
+.main-info {
+  display: flex;
+  flex-direction: column;
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 2px solid $colorLight;
+  }
+
+  &__item:last-child {
+    border-bottom: none;
+  }
+
+  &__point {
+    margin-right: 10px;
+    font-size: 22px;
+    font-weight: 500;
+    color: $textLight;
+  }
+
+  &__address, &__schedule {
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  &__phone, &__email {
+    font-size: 22px;
+    font-weight: 500;
+  }
+}

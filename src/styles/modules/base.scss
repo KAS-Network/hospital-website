@@ -11,6 +11,10 @@ ul {
   list-style: none;
 }
 
+h3 {
+  margin: 0;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -31,6 +35,10 @@ button {
   &:focus {
     outline: none;
   }
+}
+
+address {
+  font-style: normal;
 }
 
 svg * {
