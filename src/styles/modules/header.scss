@@ -1,0 +1,9 @@
+@import "variables.scss";
+
+.header {
+  background-color: $mainColor;
+
+  &__link-logo {
+    display: flex;
+  }
+}

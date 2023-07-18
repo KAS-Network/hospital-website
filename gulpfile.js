@@ -147,10 +147,10 @@ watch("src/layout/**/*.html", {
 watch("src/styles/**/*.scss", buildStylesDev);
 watch("src/scripts/**/*.js", buildScriptsDev);
 watch([
-  "src/images/**/*png",
-  "src/images/**/*jpg",
-  "src/images/**/*jpeg",
-  "src/images/**/*svg"
+  "src/images/**/*.png",
+  "src/images/**/*.jpg",
+  "src/images/**/*.jpeg",
+  "src/images/**/*.svg"
 ], buildImagesDev);
 
 exports.clean = clean;
