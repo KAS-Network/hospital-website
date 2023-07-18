@@ -3,7 +3,25 @@
 .header {
   background-color: $mainColor;
 
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   &__link-logo {
     display: flex;
+  }
+
+  &__nav-list {
+    display: flex;
+  }
+
+  &__nav-item {
+    margin-right: 70px;
+  }
+
+  &__nav-item:last-child {
+    margin-right: 0;
   }
 }
