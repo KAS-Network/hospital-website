@@ -132,6 +132,17 @@ function buildImagesDev() {
   .pipe(browserSync.stream());
 }
 
+function buildForeignStyles() {
+  return src("sources/styles/**/*.css")
+  .pipe(dest("dist/styles"));
+}
+
+function buildForeignStylesDev() {
+  return src("sources/styles/**/*.css")
+  .pipe(dest("distDev/styles"))
+  .pipe(browserSync.stream());
+}
+
 function serverInitDev() {
   browserSync.init({
     server: {
@@ -152,6 +163,7 @@ watch([
   "src/images/**/*.jpeg",
   "src/images/**/*.svg"
 ], buildImagesDev);
+watch("sources/styles/**/*.css", buildForeignStylesDev);
 
 exports.clean = clean;
 exports.cleanDev = cleanDev;
@@ -163,5 +175,7 @@ exports.buildLayout = series(buildLayout, buildIndexHTML);
 exports.buildLayoutDev = series(buildLayoutDev, buildIndexHTMLDev);
 exports.buildImages = buildImages;
 exports.buildImagesDev = buildImagesDev;
-exports.default = series(cleanDev, buildImagesDev, buildLayoutDev, buildIndexHTMLDev, buildStylesDev, buildScriptsDev, serverInitDev);
-exports.buildProd = series(clean, buildImages, buildLayout, buildIndexHTML, buildStyles, buildScripts);
+exports.buildForeignStyles = buildForeignStyles;
+exports.buildForeignStylesDev = buildForeignStylesDev;
+exports.default = series(cleanDev, buildImagesDev, buildLayoutDev, buildIndexHTMLDev, buildForeignStylesDev, buildStylesDev, buildScriptsDev, serverInitDev);
+exports.buildProd = series(clean, buildImages, buildLayout, buildIndexHTML, buildForeignStyles, buildStyles, buildScripts);
