@@ -1,0 +1,74 @@
+@import "variables.scss";
+
+.footer {
+  background-color: $mainColor;
+
+  &__container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 50px;
+  }
+
+  &__link-logo {
+    justify-self: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.law-links {
+  margin-bottom: 30px;
+
+  &__item {
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    color: $textDark;
+    font-size: 16px;
+  }
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+
+  &__item {
+    margin-right: 40px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.general-info {
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__point {
+    margin-right: 35px;
+    color: $textLight;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  &__info {
+    font-size: 16px;
+  }
+}
