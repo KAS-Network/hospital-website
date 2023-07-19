@@ -1,0 +1,67 @@
+.map {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__map-nav {
+    margin-bottom: 30px;
+  }
+}
+
+.map-nav {
+  display: flex;
+
+  &__item {
+    margin-right: 70px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__btn {
+    font-size: 22px;
+    font-weight: 500;
+
+    &:hover::after {
+      background-color: $mainColor;
+    }
+
+    &:active {
+      color: $mainColor;
+    }
+
+    &_active {
+      color: $mainColor;
+    }
+  }
+}
+
+.map-tabs {
+  &__item {
+    display: none;
+
+    &_active {
+      display: flex;
+    }
+  }
+
+  &__tab {
+    width: 1160px;
+    height: 500px;
+  }
+
+  &__item:nth-child(1) &__tab {
+    background-color: blue;
+  }
+
+  &__item:nth-child(2) &__tab {
+    background-color: red;
+  }
+
+  &__item:nth-child(3) &__tab {
+    background-color: green;
+  }
+}
