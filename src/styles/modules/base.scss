@@ -1,11 +1,12 @@
 @import "variables.scss";
-* {
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
   font-family: "Roboto", serif;
+  font-weight: 400;
   color: $textDark;
 }
 

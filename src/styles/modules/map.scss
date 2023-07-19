@@ -1,3 +1,5 @@
+@import "variables.scss";
+
 .map {
   &__container {
     display: flex;
@@ -63,5 +65,90 @@
 
   &__item:nth-child(3) &__tab {
     background-color: green;
+  }
+}
+
+.floor-map {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  &__rooms {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__room {
+    position: absolute;
+    width: 12.5%;
+    height: 40%;
+
+    &[data-id="101"] {
+      top: 60%;
+      left: 0;
+    }
+  }
+}
+
+.room {
+  outline: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &:hover &__doctor-list {
+    opacity: 1;
+  }
+
+  &__doctor-list {
+    position: absolute;
+    bottom: calc(50% + 30px);
+    left: calc(50%);
+    transform: translate(-50%);
+    padding: 10px;
+    width: max-content;
+    background-color: $mainColor;
+    border: 2px solid $colorLight;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: calc(50% - 11px);
+      height: 13px;
+      width: 22px;
+      border-top: 13px solid $colorLight;
+      border-left: 11px solid transparent;
+      border-right: 11px solid transparent;
+    }
+  }
+
+  &__doctor-info {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__doctor-name {
+    font-size: 12px;
+  }
+
+  &__doctor-post {
+    color: $tooltipColor;
+    font-size: 12px;
+  }
+
+  &__number {
+    color: $textDark;
+    font-size: 26px;
+    font-weight: 700;
   }
 }
