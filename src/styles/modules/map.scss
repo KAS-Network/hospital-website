@@ -49,23 +49,6 @@
       display: flex;
     }
   }
-
-  &__tab {
-    width: 1160px;
-    height: 500px;
-  }
-
-  &__item:nth-child(1) &__tab {
-    background-color: blue;
-  }
-
-  &__item:nth-child(2) &__tab {
-    background-color: red;
-  }
-
-  &__item:nth-child(3) &__tab {
-    background-color: green;
-  }
 }
 
 .floor-map {
@@ -88,11 +71,79 @@
       top: 60%;
       left: 0;
     }
+
+    &[data-id="103"] {
+      top: 60%;
+      left: 12.5%;
+    }
+
+    &[data-id="104"] {
+      left: 21.1207%;
+    }
+
+    &[data-id="105"] {
+      right: 21.1207%;
+    }
+
+    &[data-id="106"] {
+      right: 0;
+    }
+
+    &[data-id="201"], &[data-id="301"] {
+      top: 60%;
+      left: 0;
+    }
+
+    &[data-id="203"], &[data-id="303"] {
+      top: 60%;
+      left: 12.5%;
+    }
+
+    &[data-id="204"], &[data-id="304"] {
+      left: 21.1207%;
+    }
+
+    &[data-id="205"], &[data-id="305"] {
+      top: 60%;
+      left: 24.9138%;
+    }
+
+    &[data-id="206"], &[data-id="306"] {
+      left: 33.6207%;
+      width: 16.3793%;
+    }
+
+    &[data-id="207"], &[data-id="307"] {
+      top: 60%;
+      right: 37.1552%;
+    }
+
+    &[data-id="208"], &[data-id="308"] {
+      right: 33.6207%;
+      width: 16.3793%;
+    }
+
+    &[data-id="209"], &[data-id="309"] {
+      top: 60%;
+      right: 24.8276%;
+    }
+
+    &[data-id="210"], &[data-id="310"] {
+      right: 21.1207%;
+    }
+
+    &[data-id="211"], &[data-id="311"] {
+      top: 60%;
+      right: 12.5%;
+    }
+
+    &[data-id="212"], &[data-id="312"] {
+      right: 0%;
+    }
   }
 }
 
 .room {
-  outline: 1px solid red;
   display: flex;
   flex-direction: column;
   justify-content: center;
