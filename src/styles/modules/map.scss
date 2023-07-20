@@ -67,6 +67,16 @@
     width: 12.5%;
     height: 40%;
 
+    &[data-id="registry"] {
+      left: 33.6207%;
+      width: 32.7586%;
+    }
+
+    &[data-id="cloakroom"] {
+      right: 12.5%;
+      top: 60%;
+    }
+
     &[data-id="101"] {
       top: 60%;
       left: 0;
@@ -149,11 +159,11 @@
   justify-content: center;
   align-items: center;
 
-  &:hover &__doctor-list {
+  &:hover &__tooltip {
     opacity: 1;
   }
 
-  &__doctor-list {
+  &__tooltip {
     position: absolute;
     bottom: calc(50% + 30px);
     left: calc(50%);
@@ -164,7 +174,7 @@
     border: 2px solid $colorLight;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.2s ease;
 
     &::after {
       content: "";
@@ -201,5 +211,26 @@
     color: $textDark;
     font-size: 26px;
     font-weight: 700;
+    transition: color .2s ease;
+  }
+
+  &:hover &__number {
+    color: $textLight;
+  }
+}
+
+.schedule-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5px;
+  font-size: 12px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__time {
+    text-align: center;
   }
 }
